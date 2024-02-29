@@ -30,7 +30,7 @@ const CartContext = createContext<CartContextData>( {} as CartContextData);
 export function CartProvider({ children }: CartProviderProps) {
     const [ cart, setCart ] = useState<CartProduct[]>(()=> {
 
-        if (typeof window !== 'undefined') {
+        if (typeof window !== 'undefined' && window.localStorage) {
         const storagedCart = localStorage.getItem('@RocketShoes:cart');
         if (storagedCart ) {
           return JSON.parse(storagedCart);
