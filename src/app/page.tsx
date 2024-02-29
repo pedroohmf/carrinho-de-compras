@@ -4,7 +4,7 @@ import { CartProvider } from "@/hooks/useCart";
 import Header from '@/components/Header/page';
 import GlobalStyles from '@/styles/global'
 import { ToastContainer } from "react-toastify";
-import Home from "./Home/page";
+import Home from "../components/Home/page";
 
 const Page = () => {
   return (
