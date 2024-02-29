@@ -29,23 +29,30 @@ const CartContext = createContext<CartContextData>( {} as CartContextData);
 
 export function CartProvider({ children }: CartProviderProps) {
     const [ cart, setCart ] = useState<CartProduct[]>(()=> {
+
         const storagedCart = localStorage.getItem('@RocketShoes:cart');
-        if (storagedCart) {
+
+        if (storagedCart ) {
           return JSON.parse(storagedCart);
         }
         return [];
+        
     });
 
     const prevCartRef = useRef<Product[]>();
+
     useEffect(() => {
         prevCartRef.current = cart;
     });
+
     const cartPreviousValue = prevCartRef.current ?? cart;
 
     useEffect(()=> {
+
         if(cartPreviousValue !== cart) {
-        localStorage.setItem('@RocketShoes:cart', JSON.stringify(cart)); //! Transformando o updateCart em string e salvando no localStorage
+        localStorage.setItem('@RocketShoes:cart', JSON.stringify(cart));
         }
+
     }, [cart, cartPreviousValue]);
     
     const addProduct = async (productId: number) => {

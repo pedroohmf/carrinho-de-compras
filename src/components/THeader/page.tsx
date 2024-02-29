@@ -17,11 +17,11 @@ const THeader = ( {className }: thProps) => {
         
             <thead >
             <tr>
-                <th className="text-[#999] text-left " aria-label="product image" />
+                <th className="text-[#999] text-left "aria-label="product image" />
                 <th className="text-[#999] text-left ">PRODUTO</th>
                 <th className="text-[#999] text-left ">QTD</th>
                 <th className="text-[#999] text-left ">SUBTOTAL</th>
-                <th className="text-[#999] text-left " aria-label='delete icon' />
+                <th className="text-[#999] text-left "aria-label='delete icon' />
             </tr>
             </thead>
         
