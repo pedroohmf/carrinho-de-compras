@@ -19,9 +19,9 @@ const Cart = (): JSX.Element => {
         <>
             <Header />
             <div className='p-[30px] bg-white rounded-[4px]'>
-                <table className='w-full '>
-                    <THeader className='' />
-                    <TBody />
+                <table className='w-full'>
+                    <THeader/>
+                    <TBody/>
                 </table>
 
                 <footer className='mt-[30px] flex justify-between items-center'>

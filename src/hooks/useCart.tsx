@@ -141,3 +141,6 @@ export function useCart(): CartContextData {
     const context = useContext(CartContext);
     return context;
 }
+
+//! 280px galax fold
+//! 320px

@@ -16,7 +16,7 @@ const THeader = ( {className }: thProps) => {
     return (
         
             <thead >
-            <tr>
+            <tr className="cel:hidden lg:flex lg:justify-between">
                 <th className="text-[#999] text-left "aria-label="product image" />
                 <th className="text-[#999] text-left ">PRODUTO</th>
                 <th className="text-[#999] text-left ">QTD</th>
@@ -28,6 +28,5 @@ const THeader = ( {className }: thProps) => {
         
     )
 }
-
-
-export default dynamic(() => Promise.resolve(THeader), { ssr: false });
+export default THeader;
+// export default dynamic(() => Promise.resolve(THeader), { ssr: false });

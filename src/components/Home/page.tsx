@@ -43,14 +43,14 @@ const Home = () => {
 
   return (
     <div>
-      <ul className="grid grid-cols-3 gap-[20px] list-none">
+      <ul className="cel:grid grid-cols-1 cel:mx-1 cel:justify-center cel:gap-[20px] lg:grid lg:grid-cols-3 lg:gap-[20px] list-none">
         {products.map(item => (
-          <li key={item.id} className="flex flex-col bg-white rounded-[4px] p-[20px]">
-          <img className="self-center max-w-[250px]" src={item.image} alt={item.title} />
-          <strong className="text-[16px] leading-[20px] mt-[5px] text-[#333] max-w-full">{item.title}</strong>
-          <span className="text-[21px] font-bold mx-[5px] my-[20px] text-black">R$ {item.price}</span>
+          <li key={item.id} className="lg:flex lg:flex-col cel:flex cel:flex-col cel:justify-center cel:items-center bg-white rounded-[4px] p-[20px] cel:p-[10px]">
+          <img className="cel:self-center lg:max-w-[250px] cel:max-w-[180px] cel:min-w-[180px] cel:w-[180px]" src={item.image} alt={item.title} />
+          <strong className="text-[16px] leading-[20px] mt-[5px] text-[#333] max-w-full cel:text-[14px]">{item.title}</strong>
+          <span className="text-[21px] font-bold mx-[5px] my-[20px] text-black cel:text-[20px]">R$ {item.price}</span>
           <button
-          className="bg-[#7159c1] text-white border-0 rounded-[4px] overflow-hidden mt-auto flex items-center hover:bg-[#7159c1]/60"
+          className="bg-[#7159c1] text-white border-0 rounded-[4px] overflow-hidden mt-auto flex items-center hover:bg-[#7159c1]/60 cel:min-w-full"
           type="button"
           data-testid="add-product-button"
           onClick={() => handleAddProduct(item.id)}
@@ -60,7 +60,7 @@ const Home = () => {
             {cartItemsAmount[item.id] || 0}
           </div>
 
-          <span className="flex-1 text-center font-bold">ADICIONAR AO CARRINHO</span>
+          <span className="flex-1 text-center font-bold cel:text-[11px] cel:px-[7px] lg:text-[13px]">ADICIONAR AO CARRINHO</span>
         </button>
         </li>
         ))}
