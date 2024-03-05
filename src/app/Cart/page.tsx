@@ -6,6 +6,7 @@ import TBody from '@/components/TBody/page';
 import Header from '@/components/Header/page';
 import { useCart } from '@/hooks/useCart';
 import { formatPrice } from '@/util/format';
+import Table from '@/components/Table/page';
 
 const Cart = (): JSX.Element => {
     const { cart } = useCart();
@@ -19,16 +20,12 @@ const Cart = (): JSX.Element => {
         <>
             <Header />
             <div className='p-[30px] bg-white rounded-[4px]'>
-                <table className='w-full'>
-                    <THeader/>
-                    <TBody/>
-                </table>
-
+                <Table />
                 <footer className='mt-[30px] flex justify-between items-center'>
-                    <button type="button" className='bg-[#7159c1] text-white border-0 rounded-[4px] py-[12px] px-[20px] font-bold uppercase hover:bg-[#7159c1]/60'>Finalizar pedido</button>
+                    <button type="button" className='bg-[#7159c1] text-white border-0 rounded-[4px] lg:py-[12px] lg:px-[20px] font-bold uppercase hover:bg-[#7159c1]/60 cel:text-[8px] cel:py-[8px] cel:px-[10px]'>Finalizar pedido</button>
                     <div className='flex items-baseline'>
-                    <span className='text-zinc-700 font-bold'>TOTAL</span>
-                    <strong className='text-[28px] ml-[5px] text-black'>{total}</strong>
+                    <span className='text-zinc-700 font-bold cel:text-[12px] ml-[2px]'>TOTAL</span>
+                    <strong className='text-[28px] ml-[5px] text-black cel:text-[13px]'>{total}</strong>
                     </div>
                 </footer>
             </div>
