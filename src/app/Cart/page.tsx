@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-import THeader from '@/components/THeader/page';
-import TBody from '@/components/TBody/page';
 import Header from '@/components/Header/page';
 import { useCart } from '@/hooks/useCart';
 import { formatPrice } from '@/util/format';
